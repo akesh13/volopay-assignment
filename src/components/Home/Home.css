@@ -1,0 +1,64 @@
+.action_bar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-right: 50px;
+  padding: 5px;
+  gap: 5px;
+}
+.popover {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 10px;
+  height: 200px;
+  width: 300px;
+}
+
+.radio_label {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.radio_btn {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.apply_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 120px;
+  background-color: #ff0063;
+  color: aliceblue;
+}
+
+.clear_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 120px;
+}
+
+.payment-card-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payment-card-table th,
+.payment-card-table td {
+  padding: 8px;
+}
+
+.payment-card-table th {
+
+  font-weight: bold;
+  text-align: left;
+}
+

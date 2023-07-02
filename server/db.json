@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "LinkedIn",
+      "budget_name": "Software subscription",
+      "owner_id": 1,
+      "spent": {
+        "value": 100,
+        "currency": "SGD"
+      },
+      "available_to_spend": {
+        "value": 1000,
+        "currency": "SGD"
+      },
+      "card_type": "burner",
+      "frequency": "monthly",
+      "expiry": "9 feb",
+      "limit": 100,
+      "status": "active",
+      "currency":"SGD"
+    },
+    {
+      "id": 2,
+      "name": "Netflix",
+      "budget_name": "Software subscription",
+      "owner_id": 2,
+      "spent": {
+        "value": 50,
+        "currency": "SGD"
+      },
+      "available_to_spend": {
+        "value": 250,
+        "currency": "SGD"
+      },
+      "card_type": "subscription",
+      "frequency": "monthly",
+      "expiry": "11 feb",
+      "limit": 10,
+      "status": "active",
+      "currency":"SGD"
+    },
+    {
+      "id": 3,
+      "name": "Advertisement",
+      "budget_name": "Software subscription",
+      "owner_id": 3,
+      "spent": {
+        "value": 250,
+        "currency": "SGD"
+      },
+      "available_to_spend": {
+        "value": 500,
+        "currency": "SGD"
+      },
+      "card_type": "subscription",
+      "frequency": "monthly",
+      "expiry": "12 feb",
+      "limit": 1000,
+      "status": "active",
+      "currency":"SGD"
+    }
+  ]
+}
