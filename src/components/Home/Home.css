@@ -57,8 +57,24 @@
 }
 
 .payment-card-table th {
-
   font-weight: bold;
   text-align: left;
 }
 
+.payment_card {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.input_bar {
+  border: 2px solid rgb(183, 183, 183);
+  padding: 10px;
+}
+
+.filter_btn {
+  border: 2px solid rgb(183, 183, 183);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+}

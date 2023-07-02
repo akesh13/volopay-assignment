@@ -12,10 +12,12 @@ import {
   Button,
   Typography,
   Input,
+  Space,
+  message,
 } from "antd";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { FilterOutlined } from "@ant-design/icons";
+import { FilterOutlined, SyncOutlined, FireOutlined } from "@ant-design/icons";
 import "./Home.css";
 //--------------------------------------------------------------------------------------------------------//
 // IMPORT END ------------------------------------------------------------------------------------------//
@@ -92,7 +94,7 @@ const Homes = () => {
         ]}
       />
 
-      <Row // for the secondary header  search and filter
+      <Row // for the secondary header  search and filter menu
         style={{
           display: "flex",
           alignItems: "center",
@@ -103,6 +105,7 @@ const Homes = () => {
       >
         <Col>
           <Input
+            className="input_bar"
             style={{ maxWidth: "250px" }}
             placeholder="Enter card name to search"
             onChange={handleSearch}
@@ -133,7 +136,12 @@ const Homes = () => {
                   style={{ display: "flex", justifyContent: "space-around" }}
                 >
                   <Col>
-                    <Button className="apply_btn">Apply</Button>
+                    <Button
+                      onClick={() => message.info("yet to be implemented")}
+                      className="apply_btn"
+                    >
+                      Apply
+                    </Button>
                   </Col>
                   <Col>
                     <Button
@@ -149,25 +157,67 @@ const Homes = () => {
               </div>
             }
           >
-            <Button>
+            <Button className="filter_btn">
               <FilterOutlined /> filter
             </Button>
           </Popover>
         </Col>
       </Row>
-      <Row gutter={24}>
+      <Row gutter={16}>
         {/* card display starts */}
+
         {filteredData.map((item, id) => (
-          <Col span={8} key={id}>
-            <Card className="payment_card" title={item.name}>
-              <Typography>Card type : {item.card_type}</Typography>
+          <Col span={8} md={12} sm={8} lg={8} key={id}>
+            <Card className="payment_card">
+              <Row
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Col span={12}>
+                  <Typography
+                    style={{
+                      fontWeight: "bolder",
+                      textTransform: "capitalize",
+                      fontSize: "25px",
+                    }}
+                  >
+                    {item.name}
+                  </Typography>
+                </Col>
+                <Col span={12}>
+                  <span>
+                    {item.card_type === "burner" ? (
+                      <FireOutlined
+                        style={{
+                          backgroundColor: "#ffeef3",
+                          padding: "15px",
+                          borderRadius: "50%",
+                          color: "#fe3c73",
+                        }}
+                      />
+                    ) : (
+                      <SyncOutlined
+                        style={{
+                          backgroundColor: "#fff5ec",
+                          padding: "15px",
+                          borderRadius: "50%",
+                          color: "#ff982a",
+                        }}
+                      />
+                    )}
+                  </span>
+                </Col>
+              </Row>
 
               <table className="payment-card-table">
                 <thead>
                   <tr>
                     <th>Amount</th>
                     <th>Frequency</th>
-                    <th>Expiry</th>
+                    <th>{item.card_type === "burner" ? "Expiry" : "Limit"}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -176,7 +226,11 @@ const Homes = () => {
                       {item.limit} {item.currency}
                     </td>
                     <td>{item.frequency}</td>
-                    <td>{item.expiry}</td>
+                    <td>
+                      {item.card_type === "burner"
+                        ? item.expiry
+                        : `${item.limit}  ${item.currency}`}
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -194,8 +248,42 @@ const Homes = () => {
               <table className="payment-card-table">
                 <thead>
                   <tr>
-                    <th>Spent</th>
-                    <th>Balance</th>
+                    <th>
+                      {" "}
+                      <span
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          maxWidth: "55px",
+                          backgroundColor: "#00994b",
+                          padding: "",
+                          borderRadius: "15px",
+                          fontWeight: "lighter",
+                          color: "white",
+                        }}
+                      >
+                        Spent
+                      </span>
+                    </th>
+                    <th>
+                      {" "}
+                      <span
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          maxWidth: "55px",
+                          backgroundColor: "#ff0063",
+                          padding: "",
+                          borderRadius: "15px",
+                          fontWeight: "lighter",
+                          color: "white",
+                        }}
+                      >
+                        Balance
+                      </span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
