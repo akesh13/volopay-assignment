@@ -18,7 +18,7 @@
       "expiry": "9 feb",
       "limit": 100,
       "status": "active",
-      "currency":"SGD"
+      "currency": "SGD"
     },
     {
       "id": 2,
@@ -38,7 +38,7 @@
       "expiry": "11 feb",
       "limit": 10,
       "status": "active",
-      "currency":"SGD"
+      "currency": "SGD"
     },
     {
       "id": 3,
@@ -58,7 +58,7 @@
       "expiry": "12 feb",
       "limit": 1000,
       "status": "active",
-      "currency":"SGD"
+      "currency": "SGD"
     },
     {
       "id": 3,
@@ -78,7 +78,7 @@
       "expiry": "12 feb",
       "limit": 1000,
       "status": "active",
-      "currency":"SGD"
+      "currency": "SGD"
     },
     {
       "id": 3,
@@ -98,7 +98,7 @@
       "expiry": "12 feb",
       "limit": 1000,
       "status": "active",
-      "currency":"SGD"
+      "currency": "SGD"
     },
     {
       "id": 3,
@@ -118,7 +118,7 @@
       "expiry": "12 feb",
       "limit": 1000,
       "status": "active",
-      "currency":"SGD"
+      "currency": "SGD"
     },
     {
       "id": 3,
@@ -138,7 +138,7 @@
       "expiry": "12 feb",
       "limit": 1000,
       "status": "active",
-      "currency":"SGD"
+      "currency": "SGD"
     }
   ]
 }

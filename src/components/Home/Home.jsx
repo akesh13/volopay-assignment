@@ -66,6 +66,10 @@ const Homes = () => {
     setQuery(e.target.value);
   };
 
+  // const clearBtn = () => {
+  //   setFilteredData([])
+  // };
+
   return (
     <div>
       <Menu
@@ -125,14 +129,23 @@ const Homes = () => {
                     </Radio.Group>
                   </Col>
                 </Row>
-                {/* <Row style={{ display: "flex", justifyContent: "space-around" }}>
-              <Col>
-                <Button className="apply_btn">Apply</Button>
-              </Col>
-              <Col>
-                <Button className="clear_btn">Clear</Button>
-              </Col>
-            </Row> */}
+                <Row
+                  style={{ display: "flex", justifyContent: "space-around" }}
+                >
+                  <Col>
+                    <Button className="apply_btn">Apply</Button>
+                  </Col>
+                  <Col>
+                    <Button
+                      onClick={() => {
+                        setSelectedCardType("");
+                      }}
+                      className="clear_btn"
+                    >
+                      Clear
+                    </Button>
+                  </Col>
+                </Row>
               </div>
             }
           >
