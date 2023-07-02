@@ -1,6 +1,8 @@
 # Installation Guide
 
-I designed this project with React and ant design and axios
+I designed this project with React and ant design and axios,
+I have implemented search by card name and filter by card type as per requirement,
+As I'm supposed to use dummy json that only runs on local environment i couldn't able to deploy it on Netlify
 
 ## Available Scripts
 
