@@ -8,7 +8,7 @@ I designed this project with React and ant design and axios
 
 
 I have used dummy json that only runs on localhost
-make sure you have installed json-server in you machine
+make sure you have installed json-server in you machine,
 to install json-server open your terminal and run npm i json-server (refer npm website for additional information)
 after installing change directory to server folder (cd server) run ##`json-server --watch db.json --port 8080`
 this will run the api in localhost:8080
