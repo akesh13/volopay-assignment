@@ -61,16 +61,14 @@ const Homes = () => {
   // change Handler for choosing card type in Radio buttons
   const handleCardTypeChange = (e) => {
     setSelectedCardType(e.target.value);
+    setQuery("");
   };
 
   // search Handler for searching card by card name
   const handleSearch = (e) => {
     setQuery(e.target.value);
+    setSelectedCardType("");
   };
-
-  // const clearBtn = () => {
-  //   setFilteredData([])
-  // };
 
   return (
     <div>
@@ -266,6 +264,9 @@ const Homes = () => {
                         Spent
                       </span>
                     </th>
+                    <td>
+                      {item.spent.value} {item.spent.currency}
+                    </td>
                     <th>
                       {" "}
                       <span
@@ -284,19 +285,15 @@ const Homes = () => {
                         Balance
                       </span>
                     </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="table_tr">
-                    <td>
-                      {item.spent.value} {item.spent.currency}
-                    </td>
                     <td>
                       {item.available_to_spend.value}{" "}
                       {item.available_to_spend.currency}
                     </td>
                   </tr>
-                </tbody>
+                </thead>
+                {/* <tbody>
+                  <tr className="table_tr"></tr>
+                </tbody> */}
               </table>
             </Card>
           </Col>
